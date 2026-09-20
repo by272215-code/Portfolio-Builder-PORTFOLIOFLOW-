@@ -1,0 +1,1180 @@
+/* =========================================================
+   PORTFOLIOFLOW - BUILDER CSS
+   Responsive: Desktop + Tablet + Mobile
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--pf-bg, #071A1F);
+    color: var(--pf-text, #F2FFFC);
+    min-height: 100vh;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.builder-header {
+    width: 100%;
+    min-height: 72px;
+    padding: 14px 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    background: var(--pf-surface, #081F24);
+    border-bottom: 1px solid var(--pf-border, rgba(255,255,255,0.08));
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--pf-primary, #20D6C7);
+    letter-spacing: 0.3px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.header-btn {
+    border: 1px solid var(--pf-border, rgba(255,255,255,0.1));
+    background: var(--pf-card, #0B2529);
+    color: var(--pf-text, #F2FFFC);
+
+    padding: 10px 16px;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.header-btn:hover {
+    border-color: var(--pf-primary, #20D6C7);
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   MAIN BUILDER LAYOUT
+   ========================================================= */
+
+.builder-container {
+    width: min(1500px, 100%);
+    margin: 0 auto;
+
+    padding: 28px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 0.9fr);
+    gap: 24px;
+
+    align-items: start;
+}
+
+/* =========================================================
+   LEFT BUILDER PANEL
+   ========================================================= */
+
+.builder-panel {
+    min-width: 0;
+    background: var(--pf-surface, #081F24);
+
+    border: 1px solid var(--pf-border, rgba(255,255,255,0.08));
+    border-radius: 18px;
+
+    padding: 24px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.18);
+}
+
+.builder-title {
+    margin-bottom: 24px;
+}
+
+.builder-title h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.builder-title p {
+    color: var(--pf-muted, #91AAA7);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   FORM SECTIONS
+   ========================================================= */
+
+.form-section {
+    margin-bottom: 22px;
+    padding: 20px;
+
+    background: var(--pf-card, #0B2529);
+    border: 1px solid var(--pf-border, rgba(255,255,255,0.07));
+
+    border-radius: 15px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.section-number {
+    min-width: 32px;
+    height: 32px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: var(--pf-primary, #20D6C7);
+    color: #061416;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.form-grid.single {
+    grid-template-columns: 1fr;
+}
+
+.input-group {
+    min-width: 0;
+}
+
+.input-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--pf-text, #F2FFFC);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid var(--pf-border, rgba(255,255,255,0.1));
+    border-radius: 10px;
+
+    outline: none;
+
+    background: var(--pf-bg, #071A1F);
+    color: var(--pf-text, #F2FFFC);
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+.input-group textarea {
+    min-height: 110px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+    border-color: var(--pf-primary, #20D6C7);
+    box-shadow: 0 0 0 3px rgba(32,214,199,0.08);
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: var(--pf-muted, #91AAA7);
+}
+
+/* =========================================================
+   PROFILE PHOTO
+   ========================================================= */
+
+.profile-photo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+.profile-photo-preview {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 2px solid var(--pf-primary, #20D6C7);
+
+    background: var(--pf-bg, #071A1F);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-photo-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================================
+   DYNAMIC CARDS
+   ========================================================= */
+
+.dynamic-card {
+    position: relative;
+
+    margin-bottom: 16px;
+    padding: 17px;
+
+    background: var(--pf-bg, #071A1F);
+
+    border: 1px solid var(--pf-border, rgba(255,255,255,0.08));
+    border-radius: 13px;
+}
+
+.dynamic-card:last-child {
+    margin-bottom: 0;
+}
+
+.dynamic-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 14px;
+}
+
+.dynamic-card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--pf-primary, #20D6C7);
+}
+
+.remove-btn {
+    border: 0;
+    background: rgba(255,70,70,0.08);
+    color: #ff8b8b;
+
+    padding: 7px 10px;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.remove-btn:hover {
+    background: rgba(255,70,70,0.16);
+}
+
+/* =========================================================
+   ADD BUTTON
+   ========================================================= */
+
+.add-btn {
+    width: 100%;
+
+    margin-top: 12px;
+    padding: 11px 14px;
+
+    border: 1px dashed var(--pf-primary, #20D6C7);
+    border-radius: 10px;
+
+    background: transparent;
+    color: var(--pf-primary, #20D6C7);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.add-btn:hover {
+    background: rgba(32,214,199,0.08);
+}
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.builder-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+}
+
+.save-btn,
+.generate-btn {
+    flex: 1;
+    min-width: 180px;
+
+    padding: 13px 18px;
+
+    border-radius: 11px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.save-btn {
+    border: 1px solid var(--pf-primary, #20D6C7);
+    background: transparent;
+    color: var(--pf-primary, #20D6C7);
+}
+
+.generate-btn {
+    border: 0;
+    background: var(--pf-primary, #20D6C7);
+    color: #061416;
+}
+
+.save-btn:hover,
+.generate-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   RIGHT PREVIEW PANEL
+   ========================================================= */
+
+.preview-panel {
+    min-width: 0;
+
+    position: sticky;
+    top: 96px;
+
+    max-height: calc(100vh - 120px);
+
+    overflow: hidden;
+
+    background: var(--pf-surface, #081F24);
+
+    border: 1px solid var(--pf-border, rgba(255,255,255,0.08));
+    border-radius: 18px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.18);
+}
+
+.preview-header {
+    padding: 16px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--pf-border, rgba(255,255,255,0.08));
+}
+
+.preview-header h2 {
+    font-size: 17px;
+}
+
+.live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--pf-accent, #8BFFB0);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.live-indicator::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--pf-accent, #8BFFB0);
+}
+
+/* =========================================================
+   PORTFOLIO PREVIEW
+   ========================================================= */
+
+.portfolio-preview {
+    height: calc(100vh - 180px);
+
+    overflow-y: auto;
+
+    padding: 22px;
+}
+
+.portfolio-preview::-webkit-scrollbar {
+    width: 7px;
+}
+
+.portfolio-preview::-webkit-scrollbar-thumb {
+    background: var(--pf-primary, #20D6C7);
+    border-radius: 10px;
+}
+
+/* =========================================================
+   PREVIEW PROFILE
+   ========================================================= */
+
+.preview-profile {
+    text-align: center;
+
+    padding: 20px 10px 26px;
+}
+
+.preview-avatar {
+    width: 92px;
+    height: 92px;
+
+    margin: 0 auto 14px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--pf-primary, #20D6C7);
+    color: #061416;
+
+    font-size: 26px;
+    font-weight: 800;
+
+    border: 3px solid var(--pf-primary, #20D6C7);
+}
+
+.preview-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#previewName {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+#previewTitle {
+    color: var(--pf-primary, #20D6C7);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+#previewAbout {
+    max-width: 650px;
+    margin: 0 auto;
+
+    color: var(--pf-muted, #91AAA7);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   PREVIEW BLOCKS
+   ========================================================= */
+
+.preview-block {
+    margin-top: 18px;
+    padding: 17px;
+
+    border: 1px solid var(--pf-border, rgba(255,255,255,0.08));
+    border-radius: 13px;
+
+    background: var(--pf-card, #0B2529);
+}
+
+.preview-block h3 {
+    margin-bottom: 12px;
+
+    font-size: 15px;
+    color: var(--pf-primary, #20D6C7);
+}
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.preview-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.preview-skill {
+    padding: 7px 10px;
+
+    border-radius: 20px;
+
+    background: rgba(32,214,199,0.08);
+    border: 1px solid rgba(32,214,199,0.2);
+
+    color: var(--pf-text, #F2FFFC);
+
+    font-size: 12px;
+}
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+.preview-project-card {
+    padding: 14px;
+
+    margin-bottom: 12px;
+
+    border-radius: 11px;
+
+    background: var(--pf-bg, #071A1F);
+    border: 1px solid var(--pf-border, rgba(255,255,255,0.08));
+}
+
+.preview-project-card:last-child {
+    margin-bottom: 0;
+}
+
+.preview-project-card h4 {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.preview-project-card .project-tech {
+    color: var(--pf-primary, #20D6C7);
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.preview-project-card p {
+    color: var(--pf-muted, #91AAA7);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.preview-timeline {
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+
+    padding: 0 0 18px 18px;
+
+    border-left: 1px solid var(--pf-primary, #20D6C7);
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--pf-primary, #20D6C7);
+
+    left: -4px;
+    top: 4px;
+}
+
+.timeline-item h4 {
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.timeline-item .timeline-year {
+    color: var(--pf-primary, #20D6C7);
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    color: var(--pf-muted, #91AAA7);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   RESEARCH / CERTIFICATE / ACHIEVEMENT
+   ========================================================= */
+
+.preview-research-card,
+.preview-certificate,
+.preview-achievement {
+    padding: 13px;
+
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    background: var(--pf-bg, #071A1F);
+
+    border: 1px solid var(--pf-border, rgba(255,255,255,0.08));
+}
+
+.preview-research-card:last-child,
+.preview-certificate:last-child,
+.preview-achievement:last-child {
+    margin-bottom: 0;
+}
+
+.preview-research-card h4,
+.preview-certificate h4,
+.preview-achievement h4 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.preview-research-card p,
+.preview-certificate p,
+.preview-achievement p {
+    color: var(--pf-muted, #91AAA7);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.research-actions {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+
+    margin-top: 8px;
+}
+
+.research-actions a {
+    display: inline-block;
+
+    padding: 6px 9px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    color: var(--pf-primary, #20D6C7);
+
+    border: 1px solid rgba(32,214,199,0.2);
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   SOCIAL LINKS
+   ========================================================= */
+
+.preview-socials {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    margin-top: 14px;
+}
+
+.preview-socials a {
+    padding: 7px 10px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    color: var(--pf-text, #F2FFFC);
+
+    background: var(--pf-card, #0B2529);
+    border: 1px solid var(--pf-border, rgba(255,255,255,0.08));
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   THEME SELECTOR
+   ========================================================= */
+
+.theme-selector {
+    display: grid;
+
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+.theme-option {
+    min-width: 0;
+}
+
+.theme-option input {
+    display: none;
+}
+
+.theme-option label {
+    display: block;
+
+    padding: 10px;
+
+    border: 1px solid var(--pf-border, rgba(255,255,255,0.1));
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    transition: 0.2s ease;
+}
+
+.theme-option label:hover {
+    border-color: var(--pf-primary, #20D6C7);
+}
+
+.theme-option input:checked + label {
+    border-color: var(--pf-primary, #20D6C7);
+    box-shadow: 0 0 0 2px rgba(32,214,199,0.08);
+}
+
+.theme-option span {
+    display: block;
+    margin-top: 7px;
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .builder-container {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-panel {
+        position: relative;
+        top: auto;
+
+        max-height: none;
+    }
+
+    .portfolio-preview {
+        height: 650px;
+    }
+
+    .theme-selector {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .builder-header {
+        padding: 12px 18px;
+    }
+
+    .builder-container {
+        padding: 18px;
+        gap: 18px;
+    }
+
+    .builder-panel {
+        padding: 18px;
+    }
+
+    .form-section {
+        padding: 16px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .input-group.full-width {
+        grid-column: auto;
+    }
+
+    .theme-selector {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-preview {
+        height: 600px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+    .builder-header {
+        min-height: auto;
+
+        padding: 12px 14px;
+
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logo {
+        text-align: center;
+        font-size: 21px;
+    }
+
+    .header-actions {
+        justify-content: center;
+    }
+
+    .header-btn {
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+
+    .builder-container {
+        padding: 12px;
+        gap: 14px;
+    }
+
+    .builder-panel {
+        padding: 13px;
+        border-radius: 14px;
+    }
+
+    .builder-title {
+        margin-bottom: 18px;
+    }
+
+    .builder-title h1 {
+        font-size: 22px;
+    }
+
+    .builder-title p {
+        font-size: 12px;
+    }
+
+    .form-section {
+        padding: 13px;
+        border-radius: 12px;
+    }
+
+    .section-title {
+        font-size: 15px;
+        margin-bottom: 14px;
+    }
+
+    .section-number {
+        min-width: 28px;
+        height: 28px;
+        font-size: 11px;
+    }
+
+    .input-group input,
+    .input-group textarea,
+    .input-group select {
+        font-size: 13px;
+        padding: 11px;
+    }
+
+    .dynamic-card {
+        padding: 12px;
+    }
+
+    .dynamic-card-header {
+        align-items: flex-start;
+    }
+
+    .remove-btn {
+        flex-shrink: 0;
+    }
+
+    .builder-actions {
+        flex-direction: column;
+    }
+
+    .save-btn,
+    .generate-btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .preview-panel {
+        border-radius: 14px;
+    }
+
+    .preview-header {
+        padding: 13px 15px;
+    }
+
+    .preview-header h2 {
+        font-size: 14px;
+    }
+
+    .portfolio-preview {
+        height: 560px;
+        padding: 14px;
+    }
+
+    .preview-avatar {
+        width: 76px;
+        height: 76px;
+        font-size: 22px;
+    }
+
+    #previewName {
+        font-size: 21px;
+    }
+
+    #previewTitle {
+        font-size: 12px;
+    }
+
+    #previewAbout {
+        font-size: 12px;
+    }
+
+    .preview-block {
+        padding: 13px;
+    }
+
+    .preview-block h3 {
+        font-size: 14px;
+    }
+
+    .theme-selector {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .theme-option label {
+        padding: 8px;
+    }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .builder-container {
+        padding: 8px;
+    }
+
+    .builder-panel {
+        padding: 10px;
+    }
+
+    .form-section {
+        padding: 10px;
+    }
+
+    .header-actions {
+        flex-direction: column;
+    }
+
+    .header-btn {
+        width: 100%;
+    }
+
+    .theme-selector {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-preview {
+        height: 520px;
+        padding: 10px;
+    }
+}
+
+/* =========================================================
+   FINAL FIX - PROFILE PHOTO SIZE
+   Prevent theme CSS from enlarging preview image
+   ========================================================= */
+
+.preview-profile {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+.preview-avatar {
+    width: 92px !important;
+    min-width: 92px !important;
+    max-width: 92px !important;
+
+    height: 92px !important;
+    min-height: 92px !important;
+    max-height: 92px !important;
+
+    margin: 0 auto 14px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    position: relative !important;
+
+    overflow: hidden !important;
+
+    border-radius: 50% !important;
+
+    flex-shrink: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+.preview-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    max-width: 100% !important;
+    max-height: 100% !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+
+    position: static !important;
+
+    border-radius: 50% !important;
+
+    transform: none !important;
+}
+
+
+/* =====================================================
+   PHONEPE QR CODE
+   ===================================================== */
+
+.qr-upload-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    border: 1px dashed rgba(32, 214, 199, 0.35);
+    border-radius: 18px;
+    text-align: center;
+    background: rgba(32, 214, 199, 0.04);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.upi-qr-preview {
+    width: 220px !important;
+    height: 220px !important;
+    max-width: 100% !important;
+    display: block !important;
+    margin: 0 auto 14px !important;
+    object-fit: contain !important;
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+.qr-upload-text {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+@media (max-width: 600px) {
+
+    .upi-qr-preview {
+        width: 180px !important;
+        height: 180px !important;
+    }
+
+    .qr-upload-box {
+        padding: 15px;
+    }
+}

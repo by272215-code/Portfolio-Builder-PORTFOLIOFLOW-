@@ -1,0 +1,1315 @@
+/* =====================================================
+   PORTFOLIOFLOW
+   MULTI THEME SYSTEM
+===================================================== */
+
+
+/* =====================================================
+   DEFAULT VARIABLES
+===================================================== */
+
+:root {
+
+    --theme-bg:
+        #071A1F;
+
+    --theme-section:
+        #081F24;
+
+    --theme-card:
+        #0B2529;
+
+    --theme-card-hover:
+        #103237;
+
+    --theme-text:
+        #F2FFFC;
+
+    --theme-muted:
+        #91AAA7;
+
+    --theme-primary:
+        #20D6C7;
+
+    --theme-accent:
+        #8BFFB0;
+
+    --theme-border:
+        rgba(32, 214, 199, 0.22);
+
+    --theme-shadow:
+        rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease;
+
+}
+
+
+/* =====================================================
+   TEAL PROFESSIONAL
+===================================================== */
+
+body.theme-teal {
+
+    --theme-bg:
+        #071A1F;
+
+    --theme-section:
+        #081F24;
+
+    --theme-card:
+        #0B2529;
+
+    --theme-card-hover:
+        #103237;
+
+    --theme-text:
+        #F2FFFC;
+
+    --theme-muted:
+        #91AAA7;
+
+    --theme-primary:
+        #20D6C7;
+
+    --theme-accent:
+        #8BFFB0;
+
+    --theme-border:
+        rgba(32, 214, 199, 0.22);
+
+}
+
+
+/* =====================================================
+   PURPLE MODERN
+===================================================== */
+
+body.theme-purple {
+
+    --theme-bg:
+        #090B14;
+
+    --theme-section:
+        #101020;
+
+    --theme-card:
+        #151327;
+
+    --theme-card-hover:
+        #1D1934;
+
+    --theme-text:
+        #F7F5FF;
+
+    --theme-muted:
+        #B7B1C9;
+
+    --theme-primary:
+        #8B5CF6;
+
+    --theme-accent:
+        #C4B5FD;
+
+    --theme-border:
+        rgba(139, 92, 246, 0.28);
+
+}
+
+
+/* =====================================================
+   BLUE CORPORATE
+===================================================== */
+
+body.theme-blue {
+
+    --theme-bg:
+        #07111F;
+
+    --theme-section:
+        #0A1728;
+
+    --theme-card:
+        #0E2035;
+
+    --theme-card-hover:
+        #132A45;
+
+    --theme-text:
+        #F3F8FF;
+
+    --theme-muted:
+        #9EB3C7;
+
+    --theme-primary:
+        #3B82F6;
+
+    --theme-accent:
+        #67E8F9;
+
+    --theme-border:
+        rgba(59, 130, 246, 0.28);
+
+}
+
+
+/* =====================================================
+   GREEN MINIMAL
+===================================================== */
+
+body.theme-green {
+
+    --theme-bg:
+        #071611;
+
+    --theme-section:
+        #0A2119;
+
+    --theme-card:
+        #0E2A20;
+
+    --theme-card-hover:
+        #12382A;
+
+    --theme-text:
+        #F2FFF8;
+
+    --theme-muted:
+        #9BB9AA;
+
+    --theme-primary:
+        #22C55E;
+
+    --theme-accent:
+        #86EFAC;
+
+    --theme-border:
+        rgba(34, 197, 94, 0.26);
+
+}
+
+
+/* =====================================================
+   DARK PREMIUM
+===================================================== */
+
+body.theme-premium {
+
+    --theme-bg:
+        #080808;
+
+    --theme-section:
+        #101010;
+
+    --theme-card:
+        #171717;
+
+    --theme-card-hover:
+        #202020;
+
+    --theme-text:
+        #F7F4EA;
+
+    --theme-muted:
+        #AAA59A;
+
+    --theme-primary:
+        #D4AF37;
+
+    --theme-accent:
+        #F3D36A;
+
+    --theme-border:
+        rgba(212, 175, 55, 0.30);
+
+}
+
+
+/* =====================================================
+   GLOBAL BUILDER COLORS
+===================================================== */
+
+body {
+
+    background:
+        var(--theme-bg) !important;
+
+    color:
+        var(--theme-text) !important;
+
+}
+
+
+/* =====================================================
+   BUILDER HEADER
+===================================================== */
+
+body .builder-header {
+
+    background:
+        color-mix(
+            in srgb,
+            var(--theme-bg) 94%,
+            var(--theme-primary) 6%
+        ) !important;
+
+    border-bottom:
+        1px solid
+        var(--theme-border) !important;
+
+}
+
+
+body .builder-header .logo {
+
+    color:
+        var(--theme-text) !important;
+
+}
+
+
+body .builder-header .logo span {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+/* =====================================================
+   FORM SECTIONS
+===================================================== */
+
+body .form-section {
+
+    background:
+        var(--theme-section) !important;
+
+    border-color:
+        var(--theme-border) !important;
+
+    color:
+        var(--theme-text) !important;
+
+}
+
+
+/* =====================================================
+   FORM HEADINGS
+===================================================== */
+
+body .section-title h2 {
+
+    color:
+        var(--theme-text) !important;
+
+}
+
+
+body .section-title > span {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+body .section-title p {
+
+    color:
+        var(--theme-muted) !important;
+
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+body input,
+body textarea,
+body select {
+
+    background:
+        var(--theme-card) !important;
+
+    color:
+        var(--theme-text) !important;
+
+    border-color:
+        var(--theme-border) !important;
+
+}
+
+
+body input:focus,
+body textarea:focus,
+body select:focus {
+
+    border-color:
+        var(--theme-primary) !important;
+
+    box-shadow:
+        0 0 0 3px
+        color-mix(
+            in srgb,
+            var(--theme-primary) 12%,
+            transparent
+        ) !important;
+
+}
+
+
+body label {
+
+    color:
+        var(--theme-text) !important;
+
+}
+
+
+body small {
+
+    color:
+        var(--theme-muted);
+
+}
+
+
+/* =====================================================
+   DYNAMIC CARDS
+===================================================== */
+
+body .dynamic-card {
+
+    background:
+        var(--theme-card) !important;
+
+    border-color:
+        var(--theme-border) !important;
+
+}
+
+
+body .dynamic-card:hover {
+
+    border-color:
+        var(--theme-primary) !important;
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+body .add-btn,
+body .generate-btn,
+body .save-btn {
+
+    background:
+        var(--theme-primary) !important;
+
+    color:
+        #061010 !important;
+
+    border-color:
+        var(--theme-primary) !important;
+
+}
+
+
+body .add-btn:hover,
+body .generate-btn:hover,
+body .save-btn:hover {
+
+    filter:
+        brightness(1.08);
+
+}
+
+
+body .remove-btn {
+
+    border-color:
+        rgba(255, 100, 100, 0.35) !important;
+
+}
+
+
+/* =====================================================
+   BUILDER TITLE
+===================================================== */
+
+body .builder-title span {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+body .builder-title h1 {
+
+    color:
+        var(--theme-text) !important;
+
+}
+
+
+body .builder-title h1 strong {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+body .builder-title p {
+
+    color:
+        var(--theme-muted) !important;
+
+}
+
+
+/* =====================================================
+   PREVIEW PANEL
+===================================================== */
+
+body .preview-panel {
+
+    background:
+        var(--theme-section) !important;
+
+    border-color:
+        var(--theme-border) !important;
+
+}
+
+
+body .preview-header {
+
+    border-color:
+        var(--theme-border) !important;
+
+}
+
+
+body .preview-header span {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+body .preview-header h2 {
+
+    color:
+        var(--theme-text) !important;
+
+}
+
+
+/* =====================================================
+   LIVE INDICATOR
+===================================================== */
+
+body .live-indicator {
+
+    color:
+        var(--theme-accent) !important;
+
+}
+
+
+body .live-indicator i {
+
+    background:
+        var(--theme-primary) !important;
+
+}
+
+
+/* =====================================================
+   PREVIEW
+===================================================== */
+
+body .portfolio-preview {
+
+    background:
+        var(--theme-bg) !important;
+
+    color:
+        var(--theme-text) !important;
+
+}
+
+
+body .preview-profile {
+
+    border-color:
+        var(--theme-border) !important;
+
+}
+
+
+body .preview-profile h1 {
+
+    color:
+        var(--theme-text) !important;
+
+}
+
+
+body .preview-profile > p:first-of-type {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+body .preview-profile > p:last-child {
+
+    color:
+        var(--theme-muted) !important;
+
+}
+
+
+/* =====================================================
+   AVATAR
+===================================================== */
+
+body .preview-avatar {
+
+    background:
+        var(--theme-card) !important;
+
+    border-color:
+        var(--theme-primary) !important;
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+/* =====================================================
+   PREVIEW BLOCK
+===================================================== */
+
+body .preview-block {
+
+    background:
+        var(--theme-section) !important;
+
+    border-color:
+        var(--theme-border) !important;
+
+}
+
+
+body .preview-block h3 {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+body .preview-block p {
+
+    color:
+        var(--theme-muted);
+
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+body .preview-skills span {
+
+    background:
+        var(--theme-card) !important;
+
+    border-color:
+        var(--theme-border) !important;
+
+    color:
+        var(--theme-accent) !important;
+
+}
+
+
+/* =====================================================
+   PREVIEW PROJECT
+===================================================== */
+
+body .preview-project-card,
+body .preview-research-card,
+body .preview-certificate,
+body .preview-achievement,
+body .timeline-item {
+
+    background:
+        var(--theme-card) !important;
+
+    border-color:
+        var(--theme-border) !important;
+
+}
+
+
+body .preview-project-card h4,
+body .preview-research-card h4,
+body .preview-certificate h4,
+body .preview-achievement h4,
+body .timeline-item h4 {
+
+    color:
+        var(--theme-text) !important;
+
+}
+
+
+body .preview-project-tech,
+body .research-area {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+body .project-link,
+body .research-actions a {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+body .timeline-year {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+/* =====================================================
+   RESEARCH STATUS
+===================================================== */
+
+body .research-status {
+
+    background:
+        color-mix(
+            in srgb,
+            var(--theme-primary) 12%,
+            transparent
+        ) !important;
+
+    color:
+        var(--theme-accent) !important;
+
+    border-color:
+        var(--theme-border) !important;
+
+}
+
+
+/* =====================================================
+   EMPTY PREVIEW
+===================================================== */
+
+body .empty-preview {
+
+    color:
+        var(--theme-muted) !important;
+
+}
+
+
+/* =====================================================
+   THEME SELECTOR
+===================================================== */
+
+.theme-selector {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        14px;
+
+    margin-top:
+        20px;
+
+}
+
+
+.theme-card {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        6px;
+
+    padding:
+        15px;
+
+    border:
+        1px solid
+        var(--theme-border);
+
+    border-radius:
+        15px;
+
+    background:
+        var(--theme-card);
+
+    cursor:
+        pointer;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.theme-card:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        var(--theme-primary);
+
+}
+
+
+.theme-card input {
+
+    position:
+        absolute;
+
+    opacity:
+        0;
+
+    pointer-events:
+        none;
+
+}
+
+
+.theme-card strong {
+
+    color:
+        var(--theme-text);
+
+    font-size:
+        14px;
+
+}
+
+
+.theme-card small {
+
+    color:
+        var(--theme-muted);
+
+    font-size:
+        11px;
+
+}
+
+
+/* SELECTED */
+
+.theme-card:has(input:checked) {
+
+    border-color:
+        var(--theme-primary);
+
+    box-shadow:
+        0 0 0 2px
+        color-mix(
+            in srgb,
+            var(--theme-primary) 18%,
+            transparent
+        );
+
+}
+
+
+/* =====================================================
+   THEME MINI PREVIEW
+===================================================== */
+
+.theme-preview {
+
+    display:
+        flex;
+
+    height:
+        58px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        10px;
+
+    background:
+        #111;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+}
+
+
+.theme-preview span:nth-child(1) {
+
+    width:
+        30%;
+
+}
+
+
+.theme-preview span:nth-child(2) {
+
+    width:
+        40%;
+
+}
+
+
+.theme-preview span:nth-child(3) {
+
+    width:
+        30%;
+
+}
+
+
+/* TEAL */
+
+.theme-option-teal
+.theme-preview span:nth-child(1) {
+
+    background:
+        #071A1F;
+
+}
+
+
+.theme-option-teal
+.theme-preview span:nth-child(2) {
+
+    background:
+        #20D6C7;
+
+}
+
+
+.theme-option-teal
+.theme-preview span:nth-child(3) {
+
+    background:
+        #8BFFB0;
+
+}
+
+
+/* PURPLE */
+
+.theme-option-purple
+.theme-preview span:nth-child(1) {
+
+    background:
+        #090B14;
+
+}
+
+
+.theme-option-purple
+.theme-preview span:nth-child(2) {
+
+    background:
+        #8B5CF6;
+
+}
+
+
+.theme-option-purple
+.theme-preview span:nth-child(3) {
+
+    background:
+        #C4B5FD;
+
+}
+
+
+/* BLUE */
+
+.theme-option-blue
+.theme-preview span:nth-child(1) {
+
+    background:
+        #07111F;
+
+}
+
+
+.theme-option-blue
+.theme-preview span:nth-child(2) {
+
+    background:
+        #3B82F6;
+
+}
+
+
+.theme-option-blue
+.theme-preview span:nth-child(3) {
+
+    background:
+        #67E8F9;
+
+}
+
+
+/* GREEN */
+
+.theme-option-green
+.theme-preview span:nth-child(1) {
+
+    background:
+        #071611;
+
+}
+
+
+.theme-option-green
+.theme-preview span:nth-child(2) {
+
+    background:
+        #22C55E;
+
+}
+
+
+.theme-option-green
+.theme-preview span:nth-child(3) {
+
+    background:
+        #86EFAC;
+
+}
+
+
+/* PREMIUM */
+
+.theme-option-premium
+.theme-preview span:nth-child(1) {
+
+    background:
+        #080808;
+
+}
+
+
+.theme-option-premium
+.theme-preview span:nth-child(2) {
+
+    background:
+        #D4AF37;
+
+}
+
+
+.theme-option-premium
+.theme-preview span:nth-child(3) {
+
+    background:
+        #F3D36A;
+
+}
+
+
+/* =====================================================
+   PORTFOLIO PAGE THEME OVERRIDES
+===================================================== */
+
+body .portfolio-navbar {
+
+    background:
+        var(--theme-section) !important;
+
+    border-color:
+        var(--theme-border) !important;
+
+}
+
+
+body .portfolio-page {
+
+    color:
+        var(--theme-text);
+
+}
+
+
+body .portfolio-hero,
+body .portfolio-section {
+
+    background:
+        var(--theme-section) !important;
+
+    border-color:
+        var(--theme-border) !important;
+
+}
+
+
+body .portfolio-logo span {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+body .portfolio-nav-links a {
+
+    color:
+        var(--theme-muted) !important;
+
+}
+
+
+body .portfolio-nav-links a:hover {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+body .edit-portfolio-btn {
+
+    background:
+        var(--theme-primary) !important;
+
+    color:
+        #071010 !important;
+
+}
+
+
+body .portfolio-photo-wrapper {
+
+    border-color:
+        var(--theme-primary) !important;
+
+    background:
+        var(--theme-card) !important;
+
+}
+
+
+body .photo-placeholder {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+body .portfolio-name {
+
+    color:
+        var(--theme-text) !important;
+
+}
+
+
+body .portfolio-title {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+body .portfolio-about {
+
+    color:
+        var(--theme-muted) !important;
+
+}
+
+
+body .portfolio-contact a,
+body .portfolio-contact span {
+
+    color:
+        var(--theme-accent) !important;
+
+}
+
+
+body .portfolio-section h2 {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+body .portfolio-section {
+
+    color:
+        var(--theme-text);
+
+}
+
+
+body .portfolio-project-card,
+body .portfolio-research-card,
+body .portfolio-certificate,
+body .portfolio-achievement,
+body .portfolio-journey-item {
+
+    background:
+        var(--theme-card) !important;
+
+    border-color:
+        var(--theme-border) !important;
+
+}
+
+
+body .portfolio-project-card h3,
+body .portfolio-research-card h3,
+body .portfolio-certificate h3,
+body .portfolio-achievement h3,
+body .portfolio-journey-item h3 {
+
+    color:
+        var(--theme-text) !important;
+
+}
+
+
+body .portfolio-project-card p,
+body .portfolio-research-card p,
+body .portfolio-certificate p,
+body .portfolio-achievement p,
+body .portfolio-journey-item p {
+
+    color:
+        var(--theme-muted) !important;
+
+}
+
+
+body .project-btn,
+body .social-btn {
+
+    background:
+        var(--theme-primary) !important;
+
+    color:
+        #061010 !important;
+
+    border-color:
+        var(--theme-primary) !important;
+
+}
+
+
+body .research-area,
+body .journey-year {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+body .research-status {
+
+    color:
+        var(--theme-accent) !important;
+
+}
+
+
+body .portfolio-footer {
+
+    color:
+        var(--theme-muted) !important;
+
+    border-color:
+        var(--theme-border) !important;
+
+}
+
+
+body .portfolio-footer span {
+
+    color:
+        var(--theme-primary) !important;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE THEME SELECTOR
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .theme-selector {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
