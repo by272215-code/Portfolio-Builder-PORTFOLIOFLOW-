@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PortfolioFlow | Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+
+    <style>
+
+        /* =====================================================
+           PORTFOLIOFLOW - PORTFOLIO PAGE
+           ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--pf-bg, #0B0F14);
+            color: var(--pf-text, #F2FFFC);
+        }
+
+        a {
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        /* =====================================================
+           NAVBAR
+           ===================================================== */
+
+        .portfolio-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 15px 6%;
+
+            background: var(--pf-surface, #081F24);
+
+            border-bottom: 1px solid
+                var(--pf-border, rgba(255,255,255,0.08));
+
+            backdrop-filter: blur(14px);
+        }
+
+        .nav-logo {
+            font-size: 22px;
+            font-weight: 800;
+
+            color: var(--pf-primary, #20D6C7);
+
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            gap: 7px;
+
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+
+            padding: 8px 11px;
+
+            border-radius: 8px;
+
+            color: var(--pf-muted, #91AAA7);
+
+            font-size: 12px;
+
+            transition: 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--pf-primary, #20D6C7);
+
+            background: rgba(32,214,199,0.08);
+        }
+
+        .nav-resume {
+            border: 1px solid
+                var(--pf-primary, #20D6C7);
+
+            color: var(--pf-primary, #20D6C7) !important;
+        }
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .portfolio-hero {
+            width: min(1100px, 92%);
+
+            margin: 0 auto;
+
+            padding: 80px 20px 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .hero-inner {
+            width: 100%;
+        }
+
+        .portfolio-photo {
+            width: 145px;
+            height: 145px;
+
+            margin: 0 auto 20px;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            border: 3px solid
+                var(--pf-primary, #20D6C7);
+
+            background:
+                var(--pf-primary, #20D6C7);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 40px;
+            font-weight: 800;
+
+            color: #061416;
+        }
+
+        .portfolio-photo img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        #portfolioName {
+            margin: 0 0 8px;
+
+            font-size: clamp(32px, 6vw, 58px);
+
+            line-height: 1.05;
+        }
+
+        #portfolioTitle {
+            margin: 0 0 16px;
+
+            color:
+                var(--pf-primary, #20D6C7);
+
+            font-size:
+                clamp(16px, 2vw, 21px);
+        }
+
+        #portfolioAbout {
+            max-width: 750px;
+
+            margin: 0 auto;
+
+            color:
+                var(--pf-muted, #91AAA7);
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+        .hero-contact {
+            margin-top: 18px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            padding: 8px 12px;
+
+            border:
+                1px solid
+                var(--pf-border, rgba(255,255,255,0.08));
+
+            border-radius: 9px;
+
+            color:
+                var(--pf-muted, #91AAA7);
+
+            font-size: 12px;
+        }
+
+        /* =====================================================
+           SOCIAL LINKS
+           ===================================================== */
+
+        #portfolioSocials {
+            margin-top: 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            flex-wrap: wrap;
+        }
+
+        #portfolioSocials a {
+            padding: 9px 13px;
+
+            border-radius: 9px;
+
+            border:
+                1px solid
+                var(--pf-border, rgba(255,255,255,0.08));
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            background:
+                var(--pf-card, #0B2529);
+
+            transition: 0.2s ease;
+        }
+
+        #portfolioSocials a:hover {
+            border-color:
+                var(--pf-primary, #20D6C7);
+
+            transform: translateY(-2px);
+        }
+
+        /* =====================================================
+           PORTFOLIO ACTIONS
+           ===================================================== */
+
+        .portfolio-actions {
+            width: min(1100px, 92%);
+
+            margin: 0 auto 30px;
+
+            padding: 14px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+
+            background:
+                var(--pf-card, #0B2529);
+
+            border:
+                1px solid
+                var(--pf-border, rgba(255,255,255,0.08));
+
+            border-radius: 14px;
+        }
+
+        .portfolio-action-btn {
+            border: 1px solid
+                var(--pf-border, rgba(255,255,255,0.1));
+
+            background:
+                var(--pf-bg, #071A1F);
+
+            color:
+                var(--pf-text, #F2FFFC);
+
+            padding: 10px 14px;
+
+            border-radius: 9px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            text-decoration: none;
+
+            transition: 0.2s ease;
+        }
+
+        .portfolio-action-btn:hover {
+            border-color:
+                var(--pf-primary, #20D6C7);
+
+            color:
+                var(--pf-primary, #20D6C7);
+
+            transform: translateY(-2px);
+        }
+
+        .portfolio-action-primary {
+            background:
+                var(--pf-primary, #20D6C7);
+
+            border-color:
+                var(--pf-primary, #20D6C7);
+
+            color: #061416;
+        }
+
+        .portfolio-action-primary:hover {
+            color: #061416;
+        }
+
+        /* =====================================================
+           SECTIONS
+           ===================================================== */
+
+        .portfolio-section {
+            width: min(1100px, 92%);
+
+            margin: 0 auto 55px;
+        }
+
+        .section-heading {
+            margin-bottom: 20px;
+        }
+
+        .section-heading span {
+            color:
+                var(--pf-primary, #20D6C7);
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+        .section-heading h2 {
+            margin: 6px 0;
+
+            font-size: 28px;
+        }
+
+        .section-heading p {
+            margin: 0;
+
+            color:
+                var(--pf-muted, #91AAA7);
+
+            font-size: 13px;
+        }
+
+        .portfolio-card {
+            padding: 22px;
+
+            background:
+                var(--pf-card, #0B2529);
+
+            border:
+                1px solid
+                var(--pf-border, rgba(255,255,255,0.08));
+
+            border-radius: 16px;
+        }
+
+        /* =====================================================
+           SKILLS
+           ===================================================== */
+
+        .skills-grid {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 9px;
+        }
+
+        .skill-tag {
+            padding: 8px 12px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(32,214,199,0.08);
+
+            border:
+                1px solid
+                rgba(32,214,199,0.18);
+
+            font-size: 12px;
+        }
+
+        /* =====================================================
+           PROJECTS
+           ===================================================== */
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 15px;
+        }
+
+        .project-card {
+            padding: 20px;
+
+            background:
+                var(--pf-card, #0B2529);
+
+            border:
+                1px solid
+                var(--pf-border, rgba(255,255,255,0.08));
+
+            border-radius: 15px;
+        }
+
+        .project-card h3 {
+            margin: 0 0 7px;
+
+            font-size: 18px;
+        }
+
+        .project-tech {
+            color:
+                var(--pf-primary, #20D6C7);
+
+            font-size: 11px;
+
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color:
+                var(--pf-muted, #91AAA7);
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+        .project-actions {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 14px;
+        }
+
+        .project-actions a {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 8px 11px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+        .view-project {
+            background:
+                var(--pf-primary, #20D6C7);
+
+            color: #061416;
+        }
+
+        .live-demo {
+            border:
+                1px solid
+                var(--pf-primary, #20D6C7);
+
+            color:
+                var(--pf-primary, #20D6C7);
+        }
+
+        /* =====================================================
+           JOURNEY
+           ===================================================== */
+
+        .journey-list {
+            display: grid;
+
+            gap: 12px;
+        }
+
+        .journey-item {
+            padding: 17px;
+
+            background:
+                var(--pf-card, #0B2529);
+
+            border-left:
+                3px solid
+                var(--pf-primary, #20D6C7);
+
+            border-radius: 10px;
+        }
+
+        .journey-year {
+            color:
+                var(--pf-primary, #20D6C7);
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            margin-bottom: 5px;
+        }
+
+        .journey-item h3 {
+            margin: 0 0 6px;
+
+            font-size: 16px;
+        }
+
+        .journey-item p {
+            margin: 0;
+
+            color:
+                var(--pf-muted, #91AAA7);
+
+            font-size: 12px;
+
+            line-height: 1.6;
+        }
+
+        /* =====================================================
+           RESEARCH / CERTIFICATION / ACHIEVEMENT
+           ===================================================== */
+
+        .research-list,
+        .certificates-list,
+        .achievements-list {
+            display: grid;
+
+            gap: 12px;
+        }
+
+        .research-card,
+        .certificate-card,
+        .achievement-card {
+            padding: 18px;
+
+            background:
+                var(--pf-card, #0B2529);
+
+            border:
+                1px solid
+                var(--pf-border, rgba(255,255,255,0.08));
+
+            border-radius: 13px;
+        }
+
+        .research-card h3,
+        .certificate-card h3,
+        .achievement-card h3 {
+            margin: 0 0 6px;
+
+            font-size: 16px;
+        }
+
+        .meta {
+            color:
+                var(--pf-primary, #20D6C7);
+
+            font-size: 11px;
+
+            margin-bottom: 8px;
+        }
+
+        .research-card p,
+        .certificate-card p,
+        .achievement-card p {
+            margin: 0;
+
+            color:
+                var(--pf-muted, #91AAA7);
+
+            font-size: 12px;
+
+            line-height: 1.6;
+        }
+
+        .card-link {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            color:
+                var(--pf-primary, #20D6C7);
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+        /* =====================================================
+           RESUME
+           ===================================================== */
+
+        .resume-card {
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            padding: 28px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 22px;
+
+            background:
+                var(--pf-card, #0B2529);
+
+            border:
+                1px solid
+                var(--pf-border, rgba(255,255,255,0.08));
+
+            border-radius: 18px;
+        }
+
+        .resume-icon {
+            width: 65px;
+            height: 65px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background:
+                rgba(32,214,199,0.10);
+
+            font-size: 30px;
+        }
+
+        .resume-content {
+            flex: 1;
+        }
+
+        .resume-content h3 {
+            margin: 0 0 7px;
+
+            font-size: 20px;
+        }
+
+        .resume-content p {
+            margin: 0;
+
+            color:
+                var(--pf-muted, #91AAA7);
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+        .resume-actions {
+            display: flex;
+
+            gap: 9px;
+
+            flex-wrap: wrap;
+        }
+
+        .resume-btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 11px 16px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            transition: 0.2s ease;
+        }
+
+        .resume-btn.primary {
+            background:
+                var(--pf-primary, #20D6C7);
+
+            color: #061416;
+        }
+
+        .resume-btn.secondary {
+            border:
+                1px solid
+                var(--pf-primary, #20D6C7);
+
+            color:
+                var(--pf-primary, #20D6C7);
+        }
+
+        .resume-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* =====================================================
+           DONATION
+           ===================================================== */
+
+        .donation-card {
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        .upi-value {
+            display: inline-block;
+
+            margin: 12px 0;
+
+            padding: 10px 15px;
+
+            border-radius: 9px;
+
+            background:
+                var(--pf-bg, #071A1F);
+
+            border:
+                1px solid
+                var(--pf-border, rgba(255,255,255,0.08));
+
+            color:
+                var(--pf-primary, #20D6C7);
+
+            font-weight: 700;
+        }
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        .portfolio-footer {
+            text-align: center;
+
+            padding: 35px 20px;
+
+            color:
+                var(--pf-muted, #91AAA7);
+
+            border-top:
+                1px solid
+                var(--pf-border, rgba(255,255,255,0.08));
+
+            font-size: 12px;
+        }
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .portfolio-nav {
+                align-items: flex-start;
+
+                flex-direction: column;
+
+                padding: 13px 5%;
+            }
+
+            .nav-links {
+                width: 100%;
+
+                justify-content: flex-start;
+
+                overflow-x: auto;
+
+                flex-wrap: nowrap;
+
+                padding-bottom: 3px;
+            }
+
+            .nav-links a {
+                white-space: nowrap;
+            }
+
+            .portfolio-hero {
+                padding-top: 55px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resume-card {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .resume-actions {
+                width: 100%;
+
+                flex-direction: column;
+            }
+
+            .resume-btn {
+                width: 100%;
+            }
+
+            .portfolio-actions {
+                flex-direction: column;
+            }
+
+            .portfolio-action-btn {
+                width: 100%;
+
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .portfolio-section {
+                width: 94%;
+
+                margin-bottom: 42px;
+            }
+
+            .portfolio-hero {
+                width: 94%;
+
+                padding: 45px 8px 40px;
+            }
+
+            .portfolio-photo {
+                width: 110px;
+                height: 110px;
+            }
+
+            #portfolioName {
+                font-size: 32px;
+            }
+
+            #portfolioAbout {
+                font-size: 13px;
+            }
+
+            .portfolio-card,
+            .project-card,
+            .research-card,
+            .certificate-card,
+            .achievement-card {
+                padding: 15px;
+            }
+
+            .section-heading h2 {
+                font-size: 24px;
+            }
+        }
+
+        /* =====================================================
+           PRINT / SAVE PDF
+           ===================================================== */
+
+        @media print {
+
+              @page {
+        margin: 0;
+    }
+
+          html,
+body {
+    background: #0B0F14 !important;
+    color: #F2FFFC !important;
+
+    min-height: 100vh !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+            .portfolio-nav,
+            .portfolio-actions,
+            .resume-actions,
+            #donationSection {
+                display: none !important;
+            }
+
+            .portfolio-hero,
+            .portfolio-section {
+                width: 100%;
+
+                margin: 0;
+
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+           #projectsSection {
+    break-before: page !important;
+    page-break-before: always !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+}
+
+
+            .portfolio-card,
+.project-card,
+.research-card,
+.certificate-card,
+.achievement-card,
+.resume-card,
+.journey-item {
+    break-inside: avoid;
+
+    background: #0B0F14 !important;
+
+    color: #F2FFFC !important;
+
+    border-color: #30363D !important;
+}
+
+            .portfolio-footer {
+                border-top: 1px solid #ddd;
+
+                color: #555 !important;
+            }
+
+           a {
+            color: #20D6C7 !important;
+            }
+        }
+        /* FINAL CERTIFICATE LAYOUT FIX */
+.certificate-card .meta {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    margin-bottom: 12px !important;
+}
+
+.certificate-card .card-link {
+    display: block !important;
+    width: fit-content !important;
+    margin-top: 8px !important;
+}
+
+/* PROJECT BUTTON SPACING FIX */
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.project-actions a {
+    display: inline-flex;
+    white-space: nowrap;
+}
+
+    </style>
+</head>
+
+
+<body class="theme-teal">
+
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <nav class="portfolio-nav">
+
+        <div class="nav-logo">
+            PortfolioFlow
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#education">
+                Education
+            </a>
+
+            <a href="#skills">
+                Skills
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#journey">
+                Journey
+            </a>
+
+            <a href="#research">
+                Research
+            </a>
+
+            <a href="#certifications">
+                Certificates
+            </a>
+
+            <a href="#achievements">
+                Achievements
+            </a>
+
+            <a href="#resume"
+               class="nav-resume">
+                Resume
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <section id="home"
+                 class="portfolio-hero">
+
+            <div class="hero-inner">
+
+                <div id="portfolioPhoto"
+                     class="portfolio-photo">
+
+                    <span id="photo-placeholder">
+                        YOU
+                    </span>
+
+                </div>
+
+
+                <h1 id="portfolioName">
+                    Your Name
+                </h1>
+
+
+                <h2 id="portfolioTitle">
+                    Your Professional Title
+                </h2>
+
+
+                <p id="portfolioAbout">
+                    Your introduction will appear here.
+                </p>
+
+
+                <div class="hero-contact">
+
+                    <div id="portfolioEmail"
+                         class="contact-item">
+                    </div>
+
+                    <div id="portfolioLocation"
+                         class="contact-item">
+                    </div>
+
+                </div>
+
+
+                <div id="portfolioSocials"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PORTFOLIO ACTIONS
+             ================================================= -->
+
+        <section class="portfolio-actions">
+
+            <button
+                id="printPortfolioBtn"
+                class="portfolio-action-btn portfolio-action-primary"
+                type="button">
+
+                🖨️ Print / Save PDF
+
+            </button>
+
+
+            <button
+                id="sharePortfolioBtn"
+                class="portfolio-action-btn"
+                type="button">
+
+                📤 Share Portfolio
+
+            </button>
+
+
+            <button
+                id="copyPortfolioBtn"
+                class="portfolio-action-btn"
+                type="button">
+
+                🔗 Copy Link
+
+            </button>
+
+
+            <a
+                href="builder.html"
+                class="portfolio-action-btn">
+
+                🛠️ Back to Builder
+
+            </a>
+
+        </section>
+
+
+        <!-- =================================================
+             EDUCATION
+             ================================================= -->
+
+        <section id="educationSection"
+                 class="portfolio-section">
+
+            <div class="section-heading">
+
+                <span>
+                    ACADEMIC
+                </span>
+
+                <h2 id="education">
+                    Education
+                </h2>
+
+                <p>
+                    Academic background and specialization.
+                </p>
+
+            </div>
+
+
+            <div id="portfolioEducation"
+                 class="portfolio-card">
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SKILLS
+             ================================================= -->
+
+        <section id="skillsSection"
+                 class="portfolio-section">
+
+            <div class="section-heading">
+
+                <span>
+                    EXPERTISE
+                </span>
+
+                <h2 id="skills">
+                    Skills
+                </h2>
+
+                <p>
+                    Technologies and areas of expertise.
+                </p>
+
+            </div>
+
+
+            <div id="portfolioSkills"
+                 class="skills-grid">
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PROJECTS
+             ================================================= -->
+
+        <section id="projectsSection"
+                 class="portfolio-section">
+
+            <div class="section-heading">
+
+                <span>
+                    WORK
+                </span>
+
+                <h2 id="projects">
+                    Projects
+                </h2>
+
+                <p>
+                    Selected projects and practical work.
+                </p>
+
+            </div>
+
+
+            <div id="portfolioProjects"
+                 class="projects-grid">
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             JOURNEY
+             ================================================= -->
+
+        <section id="journeySection"
+                 class="portfolio-section">
+
+            <div class="section-heading">
+
+                <span>
+                    JOURNEY
+                </span>
+
+                <h2 id="journey">
+                    My Journey
+                </h2>
+
+                <p>
+                    Important milestones and experiences.
+                </p>
+
+            </div>
+
+
+            <div id="portfolioJourney"
+                 class="journey-list">
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             RESEARCH
+             ================================================= -->
+
+        <section id="researchSection"
+                 class="portfolio-section">
+
+            <div class="section-heading">
+
+                <span>
+                    RESEARCH
+                </span>
+
+                <h2 id="research">
+                    Research
+                </h2>
+
+                <p>
+                    Research interests and publications.
+                </p>
+
+            </div>
+
+
+            <div id="portfolioResearch"
+                 class="research-list">
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CERTIFICATIONS
+             ================================================= -->
+
+        <section id="certificationsSection"
+                 class="portfolio-section">
+
+            <div class="section-heading">
+
+                <span>
+                    LEARNING
+                </span>
+
+                <h2 id="certifications">
+                    Certifications
+                </h2>
+
+                <p>
+                    Courses and certifications.
+                </p>
+
+            </div>
+
+
+            <div id="portfolioCertifications"
+                 class="certificates-list">
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ACHIEVEMENTS
+             ================================================= -->
+
+        <section id="achievementsSection"
+                 class="portfolio-section">
+
+            <div class="section-heading">
+
+                <span>
+                    HIGHLIGHTS
+                </span>
+
+                <h2 id="achievements">
+                    Achievements
+                </h2>
+
+                <p>
+                    Awards and notable achievements.
+                </p>
+
+            </div>
+
+
+            <div id="portfolioAchievements"
+                 class="achievements-list">
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             RESUME
+             ================================================= -->
+
+        <section id="resume"
+                 class="portfolio-section">
+
+            <div class="section-heading">
+
+                <span>
+                    CAREER
+                </span>
+
+                <h2>
+                    My Resume
+                </h2>
+
+                <p>
+                    View or download my professional resume.
+                </p>
+
+            </div>
+
+
+            <div class="resume-card">
+
+                <div class="resume-icon">
+                    📄
+                </div>
+
+
+                <div class="resume-content">
+
+                    <h3>
+                        Professional Resume
+                    </h3>
+
+                    <p>
+                        Download my latest resume to know
+                        more about my education, projects,
+                        skills and experience.
+                    </p>
+
+                </div>
+
+
+                <div class="resume-actions">
+
+                    <a
+                        id="resumeViewBtn"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="resume-btn secondary">
+
+                        View Resume ↗
+
+                    </a>
+
+
+                    <a
+                        id="resumeDownloadBtn"
+                        href="#"
+                        download
+                        class="resume-btn primary">
+
+                        Download PDF ↓
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             DONATION
+             ================================================= -->
+
+        <section id="donationSection"
+                 class="portfolio-section">
+
+            <div class="section-heading">
+
+                <span>
+                    SUPPORT
+                </span>
+
+                <h2>
+                    Support My Work
+                </h2>
+
+                <p>
+                    Support future projects and research.
+                </p>
+
+            </div>
+
+
+            <div id="portfolioDonation"
+                 class="portfolio-card donation-card">
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="portfolio-footer">
+
+        <p>
+            ©
+            <span id="portfolioYear"></span>
+            PortfolioFlow.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
+
+   <script src="js/portfolio.js?v=8"></script>
+
+    <script src="js/themes.js?v=1"></script>
+
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                /* =========================================
+                   YEAR
+                   ========================================= */
+
+                const year =
+                    document.getElementById(
+                        "portfolioYear"
+                    );
+
+                if (year) {
+
+                    year.textContent =
+                        new Date().getFullYear();
+
+                }
+
+
+                /* =========================================
+                   PRINT / SAVE PDF
+                   ========================================= */
+
+                const printBtn =
+                    document.getElementById(
+                        "printPortfolioBtn"
+                    );
+
+                if (printBtn) {
+
+                    printBtn.addEventListener(
+                        "click",
+                        function () {
+
+                            window.print();
+
+                        }
+                    );
+
+                }
+
+
+                /* =========================================
+                   SHARE PORTFOLIO
+                   ========================================= */
+
+                const shareBtn =
+                    document.getElementById(
+                        "sharePortfolioBtn"
+                    );
+
+                if (shareBtn) {
+
+                    shareBtn.addEventListener(
+                        "click",
+                        async function () {
+
+                            const shareData = {
+
+                                title:
+                                    document.title,
+
+                                text:
+                                    "Check out my PortfolioFlow portfolio.",
+
+                                url:
+                                    window.location.href
+
+                            };
+
+
+                            try {
+
+                                if (
+                                    navigator.share
+                                ) {
+
+                                    await navigator.share(
+                                        shareData
+                                    );
+
+                                } else {
+
+                                    await navigator.clipboard.writeText(
+                                        window.location.href
+                                    );
+
+                                    alert(
+                                        "Portfolio link copied!"
+                                    );
+
+                                }
+
+                            } catch (error) {
+
+                                console.log(
+                                    "Share cancelled."
+                                );
+
+                            }
+
+                        }
+                    );
+
+                }
+
+
+                /* =========================================
+                   COPY PORTFOLIO LINK
+                   ========================================= */
+
+                const copyBtn =
+                    document.getElementById(
+                        "copyPortfolioBtn"
+                    );
+
+                if (copyBtn) {
+
+                    copyBtn.addEventListener(
+                        "click",
+                        async function () {
+
+                            try {
+
+                                await navigator.clipboard.writeText(
+                                    window.location.href
+                                );
+
+
+                                const originalText =
+                                    copyBtn.innerHTML;
+
+
+                                copyBtn.innerHTML =
+                                    "✅ Link Copied";
+
+
+                                setTimeout(
+                                    function () {
+
+                                        copyBtn.innerHTML =
+                                            originalText;
+
+                                    },
+                                    1800
+                                );
+
+
+                            } catch (error) {
+
+                                prompt(
+                                    "Copy this portfolio link:",
+                                    window.location.href
+                                );
+
+                            }
+
+                        }
+                    );
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+</html>

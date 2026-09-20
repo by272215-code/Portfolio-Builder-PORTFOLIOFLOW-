@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        PortfolioFlow | Build Portfolio
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/builder.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/themes.css"
+    >
+
+</head>
+
+
+<body class="theme-teal">
+
+
+<!-- ========================================
+     HEADER
+======================================== -->
+
+<header class="builder-header">
+
+    <a
+        href="index.html"
+        class="logo"
+    >
+        Portfolio<span>Flow</span>
+    </a>
+
+
+    <div class="header-actions">
+
+        <button id="previewBtn">
+            Live Preview
+        </button>
+
+        <button
+            class="save-btn"
+            id="saveBtn"
+        >
+            Save Portfolio
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- ========================================
+     BUILDER
+======================================== -->
+
+<main class="builder-container">
+
+
+<!-- ========================================
+     LEFT PANEL
+======================================== -->
+
+<section class="builder-panel">
+
+
+    <!-- TITLE -->
+
+    <div class="builder-title">
+
+        <span>
+            PORTFOLIO BUILDER
+        </span>
+
+        <h1>
+            Build Your
+            <strong>Digital Identity</strong>
+        </h1>
+
+        <p>
+            Add your information and create your
+            professional portfolio.
+        </p>
+
+    </div>
+
+
+
+    <!-- ====================================
+         THEME SELECTOR
+    ===================================== -->
+
+    <div class="form-section theme-section">
+
+        <div class="section-title">
+
+            <span>
+                01
+            </span>
+
+            <div>
+
+                <h2>
+                    Portfolio Theme
+                </h2>
+
+                <p>
+                    Choose a visual style for your portfolio.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="theme-selector">
+
+
+            <label class="theme-card theme-option-teal">
+
+                <input
+                    type="radio"
+                    name="portfolioTheme"
+                    value="teal"
+                    checked
+                >
+
+                <span class="theme-preview">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </span>
+
+                <strong>
+                    Teal Professional
+                </strong>
+
+                <small>
+                    Clean & modern
+                </small>
+
+            </label>
+
+
+
+            <label class="theme-card theme-option-purple">
+
+                <input
+                    type="radio"
+                    name="portfolioTheme"
+                    value="purple"
+                >
+
+                <span class="theme-preview">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </span>
+
+                <strong>
+                    Purple Modern
+                </strong>
+
+                <small>
+                    Creative & stylish
+                </small>
+
+            </label>
+
+
+
+            <label class="theme-card theme-option-blue">
+
+                <input
+                    type="radio"
+                    name="portfolioTheme"
+                    value="blue"
+                >
+
+                <span class="theme-preview">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </span>
+
+                <strong>
+                    Blue Corporate
+                </strong>
+
+                <small>
+                    Professional & corporate
+                </small>
+
+            </label>
+
+
+
+            <label class="theme-card theme-option-green">
+
+                <input
+                    type="radio"
+                    name="portfolioTheme"
+                    value="green"
+                >
+
+                <span class="theme-preview">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </span>
+
+                <strong>
+                    Green Minimal
+                </strong>
+
+                <small>
+                    Fresh & minimal
+                </small>
+
+            </label>
+
+
+
+            <label class="theme-card theme-option-premium">
+
+                <input
+                    type="radio"
+                    name="portfolioTheme"
+                    value="premium"
+                >
+
+                <span class="theme-preview">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </span>
+
+                <strong>
+                    Dark Premium
+                </strong>
+
+                <small>
+                    Luxury & elegant
+                </small>
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================
+         PERSONAL DETAILS
+    ===================================== -->
+
+    <div class="form-section">
+
+        <div class="section-title">
+
+            <span>
+                02
+            </span>
+
+            <div>
+
+                <h2>
+                    Personal Details
+                </h2>
+
+                <p>
+                    Basic information about you.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="input-group full">
+
+            <label>
+                Profile Photo
+            </label>
+
+            <input
+                type="file"
+                id="profilePhoto"
+                accept="image/*"
+            >
+
+            <small>
+                JPG, PNG or WEBP — recommended square photo
+            </small>
+
+        </div>
+
+
+        <div class="form-grid">
+
+
+            <div class="input-group">
+
+                <label>
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>
+                    Professional Title
+                </label>
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="e.g. AI/ML Student"
+                >
+
+            </div>
+
+
+
+            <div class="input-group full">
+
+                <label>
+                    About Yourself
+                </label>
+
+                <textarea
+                    id="about"
+                    placeholder="Write a short introduction about yourself..."
+                ></textarea>
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="your@email.com"
+                >
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>
+                    Location
+                </label>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="City, State"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    GitHub
+                </label>
+
+                <input
+                    type="url"
+                    id="github"
+                    placeholder="https://github.com/username"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    LinkedIn
+                </label>
+
+                <input
+                    type="url"
+                    id="linkedin"
+                    placeholder="https://linkedin.com/in/username"
+                >
+
+            </div>
+
+
+            <div class="input-group full">
+
+                <label>
+                    Resume Link
+                </label>
+
+                <input
+                    type="url"
+                    id="resumeLink"
+                    placeholder="https://..."
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================
+         EDUCATION
+    ===================================== -->
+
+    <div class="form-section">
+
+        <div class="section-title">
+
+            <span>
+                03
+            </span>
+
+            <div>
+
+                <h2>
+                    Education
+                </h2>
+
+                <p>
+                    Your academic background.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-grid">
+
+
+            <div class="input-group">
+
+                <label>
+                    Degree / Course
+                </label>
+
+                <input
+                    type="text"
+                    id="degree"
+                    placeholder="B.Tech CSE"
+                >
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>
+                    Specialization
+                </label>
+
+                <input
+                    type="text"
+                    id="specialization"
+                    placeholder="AI & Machine Learning"
+                >
+
+            </div>
+
+
+
+            <div class="input-group full">
+
+                <label>
+                    University / College
+                </label>
+
+                <input
+                    type="text"
+                    id="college"
+                    placeholder="Enter university name"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================
+         SKILLS
+    ===================================== -->
+
+    <div class="form-section">
+
+        <div class="section-title">
+
+            <span>
+                04
+            </span>
+
+            <div>
+
+                <h2>
+                    Skills
+                </h2>
+
+                <p>
+                    Add your technical skills.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label>
+
+                Skills
+
+                <small>
+                    Separate skills using commas
+                </small>
+
+            </label>
+
+            <input
+                type="text"
+                id="skills"
+                placeholder="Python, AI/ML, IoT, Flask, SQL"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================
+         PROJECTS
+    ===================================== -->
+
+    <div class="form-section">
+
+        <div class="section-title">
+
+            <span>
+                05
+            </span>
+
+            <div>
+
+                <h2>
+                    Projects
+                </h2>
+
+                <p>
+                    Add all your important projects.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div id="projectsContainer">
+
+            <div class="dynamic-card">
+
+                <div class="form-grid">
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Project Name
+                        </label>
+
+                        <input
+                            type="text"
+                            class="project-name"
+                            placeholder="e.g. Saarthi AI"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Technology
+                        </label>
+
+                        <input
+                            type="text"
+                            class="project-tech"
+                            placeholder="Python, Flask, AI"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group full">
+
+                        <label>
+                            Description
+                        </label>
+
+                        <textarea
+                            class="project-description"
+                            placeholder="Describe your project..."
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            GitHub / Project Link
+                        </label>
+
+                        <input
+                            type="url"
+                            class="project-link"
+                            placeholder="https://github.com/..."
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Live Demo Link
+                        </label>
+
+                        <input
+                            type="url"
+                            class="project-demo"
+                            placeholder="https://your-project.com"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="remove-btn"
+                    onclick="removeItem(this)"
+                >
+                    Remove
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="add-btn"
+            onclick="addProject()"
+        >
+            + Add Another Project
+        </button>
+
+    </div>
+
+
+
+    <!-- ====================================
+         JOURNEY
+    ===================================== -->
+
+    <div class="form-section">
+
+        <div class="section-title">
+
+            <span>
+                06
+            </span>
+
+            <div>
+
+                <h2>
+                    My Journey
+                </h2>
+
+                <p>
+                    Show your important milestones.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div id="journeyContainer">
+
+            <div class="dynamic-card">
+
+                <div class="form-grid">
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Year
+                        </label>
+
+                        <input
+                            type="text"
+                            class="journey-year"
+                            placeholder="2026"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Title
+                        </label>
+
+                        <input
+                            type="text"
+                            class="journey-title"
+                            placeholder="Started AI Research"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group full">
+
+                        <label>
+                            Description
+                        </label>
+
+                        <textarea
+                            class="journey-description"
+                            placeholder="Describe this milestone..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="remove-btn"
+                    onclick="removeItem(this)"
+                >
+                    Remove
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="add-btn"
+            onclick="addJourney()"
+        >
+            + Add Journey Milestone
+        </button>
+
+    </div>
+
+
+
+    <!-- ====================================
+         RESEARCH
+    ===================================== -->
+
+    <div class="form-section">
+
+        <div class="section-title">
+
+            <span>
+                07
+            </span>
+
+            <div>
+
+                <h2>
+                    Research
+                </h2>
+
+                <p>
+                    Showcase your research and publications.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div id="researchContainer">
+
+            <div class="dynamic-card">
+
+                <div class="form-grid">
+
+
+                    <div class="input-group full">
+
+                        <label>
+                            Research Title
+                        </label>
+
+                        <input
+                            type="text"
+                            class="research-title"
+                            placeholder="Research paper title"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Research Area
+                        </label>
+
+                        <input
+                            type="text"
+                            class="research-area"
+                            placeholder="Artificial Intelligence"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Status
+                        </label>
+
+                        <select class="research-status">
+
+                            <option>
+                                Ongoing
+                            </option>
+
+                            <option>
+                                Completed
+                            </option>
+
+                            <option>
+                                Published
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="input-group full">
+
+                        <label>
+                            Abstract
+                        </label>
+
+                        <textarea
+                            class="research-abstract"
+                            placeholder="Write a short abstract..."
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            DOI
+                        </label>
+
+                        <input
+                            type="text"
+                            class="research-doi"
+                            placeholder="10.xxxx/xxxxx"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Paper Link
+                        </label>
+
+                        <input
+                            type="url"
+                            class="research-link"
+                            placeholder="https://..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="remove-btn"
+                    onclick="removeItem(this)"
+                >
+                    Remove
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="add-btn"
+            onclick="addResearch()"
+        >
+            + Add Research
+        </button>
+
+    </div>
+
+
+
+    <!-- ====================================
+         CERTIFICATIONS
+    ===================================== -->
+
+    <div class="form-section">
+
+        <div class="section-title">
+
+            <span>
+                08
+            </span>
+
+            <div>
+
+                <h2>
+                    Certifications
+                </h2>
+
+                <p>
+                    Add your certificates and courses.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div id="certificationsContainer">
+
+            <div class="dynamic-card">
+
+                <div class="form-grid">
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Certificate Name
+                        </label>
+
+                        <input
+                            type="text"
+                            class="certificate-name"
+                            placeholder="AI/ML Certification"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Issuing Organization
+                        </label>
+
+                        <input
+                            type="text"
+                            class="certificate-org"
+                            placeholder="IIRS / Coursera / etc."
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Year
+                        </label>
+
+                        <input
+                            type="text"
+                            class="certificate-year"
+                            placeholder="2026"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Certificate Link
+                        </label>
+
+                        <input
+                            type="url"
+                            class="certificate-link"
+                            placeholder="https://..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="remove-btn"
+                    onclick="removeItem(this)"
+                >
+                    Remove
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="add-btn"
+            onclick="addCertification()"
+        >
+            + Add Certification
+        </button>
+
+    </div>
+
+
+
+    <!-- ====================================
+         ACHIEVEMENTS
+    ===================================== -->
+
+    <div class="form-section">
+
+        <div class="section-title">
+
+            <span>
+                09
+            </span>
+
+            <div>
+
+                <h2>
+                    Achievements
+                </h2>
+
+                <p>
+                    Highlight your achievements.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div id="achievementsContainer">
+
+            <div class="dynamic-card">
+
+                <div class="form-grid">
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Achievement
+                        </label>
+
+                        <input
+                            type="text"
+                            class="achievement-title"
+                            placeholder="Hackathon Winner"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Year
+                        </label>
+
+                        <input
+                            type="text"
+                            class="achievement-year"
+                            placeholder="2026"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group full">
+
+                        <label>
+                            Description
+                        </label>
+
+                        <textarea
+                            class="achievement-description"
+                            placeholder="Describe your achievement..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="remove-btn"
+                    onclick="removeItem(this)"
+                >
+                    Remove
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="add-btn"
+            onclick="addAchievement()"
+        >
+            + Add Achievement
+        </button>
+
+    </div>
+
+
+
+    <!-- ====================================
+         DONATION
+    ===================================== -->
+
+    <div class="form-section">
+
+        <div class="section-title">
+
+            <span>
+                10
+            </span>
+
+            <div>
+
+                <h2>
+                    Donation
+                </h2>
+
+                <p>
+                    Add optional donation information.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-grid">
+
+
+            <!-- UPI ID -->
+
+            <div class="input-group">
+
+                <label>
+                    UPI ID
+                </label>
+
+                <input
+                    type="text"
+                    id="upi"
+                    value="8092437609@axl"
+                    readonly
+                >
+
+            </div>
+
+
+
+            <!-- DONATION PURPOSE -->
+
+            <div class="input-group">
+
+                <label>
+                    Donation Purpose
+                </label>
+
+                <input
+                    type="text"
+                    id="donationPurpose"
+                    placeholder="Support my research"
+                >
+
+            </div>
+
+
+
+            <!-- ACTUAL PHONEPE QR -->
+
+            <div class="input-group full">
+
+                <label>
+                    UPI QR Code
+                </label>
+
+
+                <div
+                    class="qr-upload-box"
+                >
+
+                    <img
+                        src="assets/phonepe-qr.jpeg"
+                        alt="Bittu Kumar PhonePe QR Code"
+                        class="upi-qr-preview"
+                    >
+
+
+                    <p class="qr-upload-text">
+                        Scan this QR code to support my work.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================
+         GENERATE
+    ===================================== -->
+
+    <button
+        class="generate-btn"
+        id="generateBtn"
+        type="button"
+    >
+        Generate My Portfolio →
+    </button>
+
+
+</section>
+
+
+
+<!-- ========================================
+     RIGHT PREVIEW
+======================================== -->
+
+<section class="preview-panel">
+
+
+    <div class="preview-header">
+
+        <div>
+
+            <span>
+                LIVE PREVIEW
+            </span>
+
+            <h2>
+                Your Portfolio
+            </h2>
+
+        </div>
+
+
+        <div class="live-indicator">
+
+            <i></i>
+
+            Live
+
+        </div>
+
+    </div>
+
+
+
+    <div
+        class="portfolio-preview"
+        id="portfolioPreview"
+    >
+
+
+        <!-- PROFILE -->
+
+        <div class="preview-profile">
+
+            <div
+                class="preview-avatar"
+                id="previewAvatar"
+            >
+                YOU
+            </div>
+
+
+            <h1 id="previewName">
+                Your Name
+            </h1>
+
+
+            <p id="previewTitle">
+                Your Professional Title
+            </p>
+
+
+            <p id="previewAbout">
+                Your introduction will appear here.
+            </p>
+
+        </div>
+
+
+
+        <!-- EDUCATION -->
+
+        <div class="preview-block">
+
+            <h3>
+                Education
+            </h3>
+
+            <p id="previewEducation">
+                Your education details
+            </p>
+
+        </div>
+
+
+
+        <!-- SKILLS -->
+
+        <div class="preview-block">
+
+            <h3>
+                Skills
+            </h3>
+
+            <div
+                class="preview-skills"
+                id="previewSkills"
+            >
+
+                <span>
+                    Your Skills
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROJECTS -->
+
+        <div class="preview-block">
+
+            <h3>
+                Projects
+            </h3>
+
+            <div id="previewProjects">
+
+                <div class="empty-preview">
+                    Your projects will appear here.
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- JOURNEY -->
+
+        <div class="preview-block">
+
+            <h3>
+                My Journey
+            </h3>
+
+            <div id="previewJourney">
+
+                <div class="empty-preview">
+                    Your journey will appear here.
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RESEARCH -->
+
+        <div class="preview-block">
+
+            <h3>
+                Research
+            </h3>
+
+            <div id="previewResearchList">
+
+                <div class="empty-preview">
+                    Your research will appear here.
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CERTIFICATES -->
+
+        <div class="preview-block">
+
+            <h3>
+                Certifications
+            </h3>
+
+            <div id="previewCertificates">
+
+                <div class="empty-preview">
+                    Your certificates will appear here.
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ACHIEVEMENTS -->
+
+        <div class="preview-block">
+
+            <h3>
+                Achievements
+            </h3>
+
+            <div id="previewAchievements">
+
+                <div class="empty-preview">
+                    Your achievements will appear here.
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SOCIAL -->
+
+        <div class="preview-block">
+
+            <h3>
+                Connect
+            </h3>
+
+            <div
+                id="previewSocials"
+                class="preview-socials"
+            ></div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- ========================================
+     BUILDER JS
+======================================== -->
+
+<script src="js/builder.js?v=7"></script>
+
+
+<!-- ========================================
+     THEME SYSTEM
+======================================== -->
+
+<script src="js/themes.js?v=1"></script>
+
+
+</body>
+
+</html>
